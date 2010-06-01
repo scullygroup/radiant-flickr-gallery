@@ -1,7 +1,6 @@
-h1. Radiant CMS testimonial management tool extension
+h1. Radiant CMS flickr gallery extension 
 
-A quick and dirty extension that allows you to add Flickr Galleries via radius tags in Radiant.
-
+A quick extension that will embed the square thumbnail of a flickr photo, wrapped in a link to either the large or original sized image for quick gallery creation.  The idea is that you can quickly and easily add inline galleries to your radiant site via a copy and paste radius tag generator in the admin.
 
 h2. Requirements
 
