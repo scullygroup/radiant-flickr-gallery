@@ -1,0 +1,36 @@
+#flickr-table td{
+	padding:8px;
+}
+
+#flickr-table tr.even td{
+	background:#F4F4F4;
+}
+
+#flickr-table th {
+	background:#F4F4F4;
+	color:#aaa;
+}
+
+#flickr-code{
+	float:left;
+	padding:15px;
+	border:1px solid #333;
+	background:#fff;
+	margin-left:15px;
+	margin-top:15px;
+}
+
+#clipboard{
+	margin-right:15px;
+	margin-top:15px;
+	float:right;
+}
+
+#infobox{
+	display:block;
+	width:500px;
+	height:80px;
+	background:#f4f4f4;
+	border:1px solid #eee;
+	margin-bottom:50px;
+}

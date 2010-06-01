@@ -7,7 +7,7 @@ class FlickrGalleryController < ApplicationController
   no_login_required
   radiant_layout 'photo_gallery_layout'
 
-  before_filter :protect_from_forgery, :except => [:index, :photoset]
+  before_filter :protect_from_forgery, :except => [:photoset]
   
   def photoset
     config = YAML.load_file("config/flickr.yml")

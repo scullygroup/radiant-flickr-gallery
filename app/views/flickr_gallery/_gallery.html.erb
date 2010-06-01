@@ -78,13 +78,12 @@
     //]]>
   </script>
 
-<div id="flickr-photos">
-  <div id="static-photos">
-    <% for photo in @photos %>
-    <a href="<%= photo[1] %>" ><img title="<%= photo[2] %>" src="<%= photo[0] %>" /></a>
-    <% end %>
-  </div>
-</div>
 <% if @hastitle == true %>
-  <div id="photo-title"><h3></h3></div>
+<h3></h3>
 <% end %>
+
+<div class="flickr-gallery">
+  <% for photo in @photos %>
+  <a href="<%= photo[1] %>" ><img title="<%= photo[2] %>" src="<%= photo[0] %>" /></a>
+  <% end %>
+</div>
