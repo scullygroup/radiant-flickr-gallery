@@ -1,0 +1,90 @@
+
+<script type="text/javascript">
+    //the place for some inline doccument.ready code
+    //<![CDATA[
+        
+        $(document).ready(function() {
+          var flashvars = {
+             xml_path:"/filmstrip"
+          };
+          var params = {
+              menu: "false",
+              wmode: "transparent"
+          };
+          var attributes = {};
+          swfobject.embedSWF("/swf/slideshow.swf", "flickr-photos", "854", "580","9.0.0", "/swf/expressInstall.swf", flashvars, params, attributes, embedStatus);
+          
+          
+          //assign the click events for the left and right arrows
+          $("#gal-arrow-left").click(function(){
+            thisMovie("flickr-photos").sendPhotoPrev();
+            //alert("left arrow clicked!");
+          });
+          
+          $("#gal-arrow-right").click(function(){
+            thisMovie("flickr-photos").sendPhotoNext();
+            //alert("right arrow clicked!");
+          });
+          
+          $("#gal-arrow-start").click(function(){
+            thisMovie("flickr-photos").sendPhotoStart();
+            //alert("left arrow clicked!");
+          });
+          
+          $("#gal-arrow-end").click(function(){
+            thisMovie("flickr-photos").sendPhotoEnd();
+            //alert("right arrow clicked!");
+          });
+          
+        });
+        
+        function setCurrentPhoto(num, total){
+          //alert("setting the current photo!" + num + " of " + total);
+          $(function(){
+        	  $("#photocount").html((num + 1) + " of " + total);
+          });
+        }
+        
+        function setTitle(text){
+          $(function(){
+        	  $("#photo-title h3").html(text);
+          });
+          
+          //do the cufon
+      	  Cufon.replace('h3', { fontFamily: 'Trajan Pro' });
+          
+        }
+        
+        function getJSON(){
+          return <%= @photos_json %>;
+        }
+        
+        function embedStatus(e){
+          if(e.success == true){
+            $(function(){
+          	  $("#counter").fadeIn();
+            });
+          }
+        }
+
+        function thisMovie(movieName) {
+          if (navigator.appName.indexOf("Microsoft") != -1) {
+            return window[movieName];
+          } else {
+            return document[movieName];
+          }
+        }
+        
+    //]]>
+  </script>
+
+<div id="flickr-photos">
+  <div id="static-photos">
+    <% for photo in @photos %>
+    <a href="<%= photo[1] %>" ><img title="<%= photo[2] %>" src="<%= photo[0] %>" /></a>
+    <% end %>
+  </div>
+</div>
+<% if @hastitle == true %>
+  <div id="photo-title"><h3></h3></div>
+<% end %>

@@ -1,0 +1,78 @@
+<% include_stylesheet 'admin/gallery' %>
+<% include_javascript 'swfobject' %>
+
+<h1>Flickr Gallery Helper</h1>
+
+<p>To add a gallery to a page, click the copy button next to the box below and replace "12345" with the appropriate set id from the list below. Or click the "Get Code" link near the photoset you wish create a gallery from and then click the copy button next to the white box to copy it to your clipboard. Then paste the code into the page you wish to add a gallery via the edit source button.</p>
+
+<script type="text/javascript">
+  var flashvars = {
+    setid: "testing"
+  };
+  var params = {
+      menu: "false",
+      wmode: "transparent",
+      allowscriptaccess: "always"
+  };
+  var attributes = {allowfullscreen: "false"};
+
+  swfobject.embedSWF("/swf/clipboardcopy.swf", "clipboard-holder", "40", "44","10.0.0", "clipboard-holder", flashvars, params, attributes);
+  
+  document.observe("dom:loaded", function() {
+
+    $$('a.get-code').each(function(s){
+      s.observe('click', respondToClick);
+    });
+
+    function respondToClick(event) {
+      var element = event.element();
+      var href = element.readAttribute('href')
+      
+      Event.stop(event);
+      
+      //update the flickr code in the box
+      $$('#flickr-code').each(function(s){
+        s.update("&lt;r:flickrgallery photosets=" + href + " /&gt;");
+      });
+      
+      document.location = "#code"
+      
+      //send it to flash
+      thisMovie("clipboard-holder").sendPhotosetId(href);
+    }
+    
+    function thisMovie(movieName) {
+      if (navigator.appName.indexOf("Microsoft") != -1) {
+        return window[movieName];
+      } else {
+        return document[movieName];
+      }
+    }
+    
+  });
+  
+</script>
+
+<a name="code"></a>
+<div id="infobox">
+  <div id="flickr-code">
+    &lt;r:flickrgallery photosets="12345" /&gt;
+  </div>
+  <div id="clipboard">
+    <div id="clipboard-holder"></div>
+  </div>
+</div>
+
+<table id="flickr-table" border="0">
+<tr>
+  <th>Title</th>
+  <th>First Photo</th>
+  <th>Photoset ID</th>
+  <th></th>
+</tr>
+<% count = 0 %>
+<% for photo in @flickr_photosets %>
+  <% count += 1 %>
+  <tr class="<%= "even" if count%2 == 0 %>"><%= photo %></tr>
+<% end %>
+</table>

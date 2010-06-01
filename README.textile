@@ -1,0 +1,10 @@
+h1. Radiant CMS testimonial management tool extension
+
+A quick and dirty extension that allows you to add Flickr Galleries via radius tags in Radiant.
+
+
+h2. Requirements
+
+<p>*Gems*<br /></p>
+nokogiri
+openuri
