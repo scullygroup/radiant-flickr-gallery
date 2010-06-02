@@ -20,7 +20,7 @@ h2. Installation
 h4. Clone the repo to your radiant extensions directory
 
 <pre>
-git clone git@github.com:scullygroup/radiant-flickr-gallery.git vendor/extensions/flickr_gallery
+git clone git://github.com/scullygroup/radiant-flickr-gallery.git vendor/extensions/flickr_gallery
 </pre>
 
 h4. Create config/flickr.yml that looks like this
