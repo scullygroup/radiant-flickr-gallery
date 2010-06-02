@@ -23,9 +23,7 @@ h4. Create config/flickr.yml that looks like this
 <code>
 	
 	key: 77777777777777777777777777777777
-	
 	secret: 7777777777777777
-	
 	user: 77777777@N08
 	
 </code>
