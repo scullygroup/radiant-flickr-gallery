@@ -13,7 +13,6 @@ h2. Installation
 h4. Clone the repo to your radiant extensions directory
 
 <code>
-	
 	git clone git@github.com:scullygroup/radiant-flickr-gallery.git vendor/extensions/flickr_gallery
 	
 </code>
@@ -21,7 +20,6 @@ h4. Clone the repo to your radiant extensions directory
 h4. Create config/flickr.yml that looks like this
 
 <code>
-	
 	key: 77777777777777777777777777777777
 	secret: 7777777777777777
 	user: 77777777@N08
@@ -33,7 +31,6 @@ Replace the 7's with your flickr api key <a href="http://www.flickr.com/services
 h4. Run the update rake task for the extension
 
 <code>
-	
 	rake radiant:extensions:flickr_gallery:update
 	
 </code>
