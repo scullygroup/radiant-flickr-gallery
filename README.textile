@@ -1,6 +1,6 @@
 h1. Radiant CMS flickr gallery extension 
 
-A quick extension that will embed the square thumbnail of a flickr photo, wrapped in a link to either the large or original sized image for quick gallery creation.  The idea is that you can quickly and easily add inline galleries to your radiant site via a copy and paste radius tag generator in the admin.
+A quick extension with an admin tab to let users easily insert inline thumbnail galleries of their flickr photosets.  
 
 h2. Requirements
 
@@ -10,7 +10,7 @@ openuri
 
 h2. Features
 
-* light weight no extra fluff to slow you down
+* light on features, just a way to create simple thumbnail galleries from photosets on flickr
 * admin tab with easy copy paste interface for clients to manage placing galleries
 * in line galleries and multiple galleries per page
 * designed to work well with javascript modal box galleries (like <a href="http://fancybox.net">fancybox</a>) 
@@ -47,4 +47,8 @@ That's all there is to it, and now you have a flickr based gallery that you coul
 $("div.flickr-gallery a").fancybox();
 </pre>
 
-If you don't want to use fancybox or you just want to modify the dom elements to better suit your needs just edit view for the gallery app/views/flickr_gallery/_gallery.html.erb
+If you don't want to use fancybox or you just want to modify the dom elements to better suit your needs just edit view for the gallery 
+
+<pre>
+vendor/extensions/flickr_gallery/app/views/flickr_gallery/_gallery.html.erb
+</pre>
