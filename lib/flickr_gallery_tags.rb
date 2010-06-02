@@ -63,7 +63,7 @@ module FlickrGalleryTags
       set_photo = []
       
       photoset_photo.xpath("/rsp/sizes/size").each do |size|
-        if size['label'] == "Square" || size['label'] == "Original" || size['label'] == "Large"
+        if size['label'] == "Square" || size['label'] == "Medium"
           set_photo.push(size['source'])
         end
       end
