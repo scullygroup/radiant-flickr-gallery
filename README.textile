@@ -31,3 +31,11 @@ h4. Run the update rake task for the extension
 <pre>
 rake radiant:extensions:flickr_gallery:update
 </pre>
+
+That's all there is to it, and now you have a flickr based gallery that you could fancy up on the front end.  I recommend <a href="http://fancybox.net">fancybox</a> it lets you use css selectors to specify the dom elements you want to make modal box links, and I happen to already have classes built in so it's as easy as this:
+
+<pre>
+$("div.flickr-gallery a").fancybox();
+</pre>
+
+If you don't want to use fancybox or you just want to modify the dom elements to better suit your needs just edit the app/views/flickr_gallery/_gallery.html.erb
