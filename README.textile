@@ -47,7 +47,7 @@ That's all there is to it, and now you have a flickr based gallery that you coul
 $("div.flickr-gallery a").fancybox();
 </pre>
 
-If you don't want to use fancybox or you just want to modify the dom elements to better suit your needs just edit view for the gallery 
+If you don't want to use fancybox or you just want to modify the dom elements to better suit your needs, just edit view for the gallery 
 
 <pre>
 vendor/extensions/flickr_gallery/app/views/flickr_gallery/_gallery.html.erb
