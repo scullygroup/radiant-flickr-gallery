@@ -2,11 +2,13 @@ h1. Radiant CMS flickr gallery extension
 
 A quick extension with an admin tab to let users easily insert inline thumbnail galleries of their flickr photosets.  
 
+
 h2. Requirements
 
 <p>*Gems*<br /></p>
 nokogiri
 openuri
+
 
 h2. Features
 
@@ -14,6 +16,7 @@ h2. Features
 * admin tab with easy copy paste interface for clients to manage placing galleries
 * in line galleries and multiple galleries per page
 * designed to work well with javascript modal boxes (like <a href="http://fancybox.net" target="_blank">fancybox</a>) 
+
 
 h2. Installation
 
@@ -38,6 +41,7 @@ h4. Run the update rake task for the extension
 <pre>
 rake radiant:extensions:flickr_gallery:update
 </pre>
+
 
 h2. Make it fancy
 
