@@ -13,7 +13,7 @@ h2. Features
 * light on features, just a way to create simple thumbnail galleries from photosets on flickr
 * admin tab with easy copy paste interface for clients to manage placing galleries
 * in line galleries and multiple galleries per page
-* designed to work well with javascript modal boxes (like <a href="http://fancybox.net">fancybox</a>) 
+* designed to work well with javascript modal boxes (like <a href="http://fancybox.net" target="_blank">fancybox</a>) 
 
 h2. Installation
 
@@ -31,7 +31,7 @@ secret: 7777777777777777
 user: 77777777@N08
 </pre>
 
-Replace the 7's with your flickr api key <a href="http://www.flickr.com/services/apps/create/apply/">here</a> and find your flickr user id <a href="http://idgettr.com/">here</a>.
+Replace the 7's with your flickr api key <a href="http://www.flickr.com/services/apps/create/apply/" target="_blank">here</a> and find your flickr user id <a href="http://idgettr.com/" target="_blank">here</a>.
 
 h4. Run the update rake task for the extension
 
@@ -41,13 +41,13 @@ rake radiant:extensions:flickr_gallery:update
 
 h2. Make it fancy
 
-That's all there is to it, and now you have a flickr based gallery that you could fancy up on the front end.  I recommend <a href="http://fancybox.net/">fancybox</a> it lets you use css selectors to specify the dom elements you want to make modal box links, and I happen to already have classes built in.
+That's all there is to it, and now you have a flickr based gallery that you could fancy up on the front end.  I recommend <a href="http://fancybox.net/" target="_blank">fancybox</a> it lets you use css selectors to specify the dom elements you want to make modal box links, and I happen to already have classes built in.
 
 It's as easy as downloading fancybox, and adding this javascript to the head of your site:
 
 <pre>
 $(document).ready(function() {	
-	$("div.flickr-gallery a").fancybox();
+  $("div.flickr-gallery a").fancybox();
 });
 </pre>
 
