@@ -8,6 +8,13 @@ h2. Requirements
 nokogiri
 openuri
 
+h2. Features
+
+* light weight no extra fluff to slow you down
+* admin tab with easy copy paste interface for clients to manage placing galleries
+* in line galleries and multiple galleries per page
+* designed to work well with javascript modal box galleries (like <a href="http://fancybox.net">fancybox</a>) 
+
 h2. Installation
 
 h4. Clone the repo to your radiant extensions directory
@@ -32,10 +39,12 @@ h4. Run the update rake task for the extension
 rake radiant:extensions:flickr_gallery:update
 </pre>
 
+h2. Make it fancy
+
 That's all there is to it, and now you have a flickr based gallery that you could fancy up on the front end.  I recommend <a href="http://fancybox.net">fancybox</a> it lets you use css selectors to specify the dom elements you want to make modal box links, and I happen to already have classes built in so it's as easy as this:
 
 <pre>
 $("div.flickr-gallery a").fancybox();
 </pre>
 
-If you don't want to use fancybox or you just want to modify the dom elements to better suit your needs just edit the app/views/flickr_gallery/_gallery.html.erb
+If you don't want to use fancybox or you just want to modify the dom elements to better suit your needs just edit view for the gallery app/views/flickr_gallery/_gallery.html.erb
