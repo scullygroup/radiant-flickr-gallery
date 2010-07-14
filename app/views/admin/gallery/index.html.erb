@@ -32,7 +32,7 @@
       
       //update the flickr code in the box
       $$('#flickr-code').each(function(s){
-        s.update("&lt;r:flickrgallery photosets=" + href + " /&gt;");
+        s.update("&lt;r:flickrgallery photosets=\"" + href + "\" /&gt;");
       });
       
       document.location = "#code"
